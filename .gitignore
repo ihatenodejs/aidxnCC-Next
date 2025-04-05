@@ -4,3 +4,9 @@
 # node/bun
 node_modules/
 bun.lock
+
+# tailwind generated files
+public/css/main.css
+
+# environment variables
+.env
