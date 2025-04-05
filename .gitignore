@@ -1,0 +1,6 @@
+# webstorm
+.idea/
+
+# node/bun
+node_modules/
+bun.lock
