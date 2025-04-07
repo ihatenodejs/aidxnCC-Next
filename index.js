@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
     req: req,
     title: "aidxnCC",
     description: "aidxnCC",
-    tags: [ "example", "test" ]
+    tags: [ "example", "test" ] // TODO: dont forget this stuff
   })
 })
 

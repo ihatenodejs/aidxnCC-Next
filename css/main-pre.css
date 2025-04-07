@@ -3,3 +3,7 @@
 body {
   font-family: 'Xanh Mono', monospace;
 }
+
+.mono {
+  font-family: "IBM Plex Mono", monospace;
+}
