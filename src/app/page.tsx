@@ -11,7 +11,7 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { SiAmazonwebservices, SiCloudflare, SiDocker, SiGitea, SiGithub, SiNextdotjs, SiNodedotjs, SiOracle, SiPython, SiTailwindcss, SiTelegram, SiTypescript } from "react-icons/si"
 import { TbHammer, TbMail, TbPlugConnected, TbServer } from "react-icons/tb"
-import { RiCodeFill, RiGitBranchFill, RiGithubFill, RiGitRepositoryFill, RiInformationLine, RiNextjsFill, RiOpenSourceFill, RiTelegram2Fill } from "react-icons/ri"
+import { RiGithubFill, RiInformationLine, RiNextjsFill, RiOpenSourceFill, RiTelegram2Fill } from "react-icons/ri"
 import CurrentTime from "@/components/CurrentTime"
 import { FaGitAlt, FaLinux, FaWindows } from "react-icons/fa"
 import { ArrowRight } from "lucide-react"
@@ -21,38 +21,38 @@ export default async function Home() {
   return (
     <div className="flex flex-col items-center bg-gradient-to-b from-slate-50 to-slate-100 dark:from-slate-950 dark:to-slate-900 min-h-screen">
       <Header />
-      <div className="flex flex-col items-center w-full h-full px-6 pb-6">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full">
+      <div className="flex flex-col items-center w-full h-full px-4 sm:px-6 pb-4 sm:pb-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 w-full">
           <Card className="bg-transparent">
-            <CardContent className="flex items-center justify-center lg:justify-start p-4 lg:p-6">
-              <div className="flex flex-col lg:flex-row items-center gap-6">
+            <CardContent className="flex items-center justify-center xl:justify-start sm:p-4 xl:p-6">
+              <div className="flex flex-col xl:flex-row items-center gap-4 xl:gap-6">
                 <Image
                   src="/images/ihatenodejs.jpeg"
                   alt="Aidan Honor"
-                  width={160}
-                  height={160}
-                  className="rounded-full"
+                  width={140}
+                  height={140}
+                  className="rounded-full sm:w-[160px] sm:h-[160px]"
                 />
-                <div className="flex flex-col items-center lg:items-start gap-1 text-center lg:text-left">
+                <div className="flex flex-col items-center xl:items-start gap-1 text-center xl:text-left">
                   <div className="flex flex-col gap-1 mb-2">
-                    <CardTitle className="text-3xl lg:text-4xl font-bold">Aidan Honor</CardTitle>
-                    <CardDescription className="lg:text-md">Systems Administrator, Web Developer, and Student</CardDescription>
+                    <CardTitle className="text-2xl sm:text-3xl xl:text-4xl font-bold">Aidan Honor</CardTitle>
+                    <CardDescription className="text-sm sm:text-base xl:text-md">Systems Administrator, Web Developer, and Student</CardDescription>
                   </div>
-                  <div className="flex flex-col lg:flex-row gap-2 mt-2.5 w-full lg:w-auto">
-                    <Link href="https://github.com/ihatenodejs" className="w-full lg:w-auto">
-                      <Button className="w-full lg:w-auto cursor-pointer">
+                  <div className="flex flex-col sm:flex-row gap-2 mt-2.5 w-full xl:w-auto">
+                    <Link href="https://github.com/ihatenodejs" className="w-full xl:w-auto">
+                      <Button className="w-full xl:w-auto cursor-pointer">
                         <SiGithub className="mr-2" />
                         GitHub
                       </Button>
                     </Link>
-                    <Link href="mailto:aidan@p0ntus.com" className="w-full lg:w-auto">
-                      <Button className="w-full lg:w-auto cursor-pointer">
+                    <Link href="mailto:aidan@p0ntus.com" className="w-full xl:w-auto">
+                      <Button className="w-full xl:w-auto cursor-pointer">
                         <TbMail className="mr-2" />
                         Email
                       </Button>
                     </Link>
-                    <Link href="https://t.me/p0ntu5" className="w-full lg:w-auto">
-                      <Button className="w-full lg:w-auto cursor-pointer">
+                    <Link href="https://t.me/p0ntu5" className="w-full xl:w-auto">
+                      <Button className="w-full xl:w-auto cursor-pointer">
                         <RiTelegram2Fill className="mr-2" />
                         Telegram
                       </Button>
@@ -68,22 +68,22 @@ export default async function Home() {
                 <RiInformationLine size={32} />
                 Quick Info
               </CardTitle>
-              <div className="flex flex-col gap-3 mt-6">
+              <div className="flex flex-col gap-3 mt-4 sm:mt-6">
                 <div className="flex flex-row gap-1 justify-between">
-                  <p className="text-xl font-semibold">Age</p>
+                  <p className="text-lg sm:text-xl font-semibold">Age</p>
                   <div className="flex flex-row gap-1 items-center">
                     17
                   </div>
                 </div>
                 <div className="flex flex-row gap-1 justify-between">
-                  <p className="text-xl font-semibold">Location</p>
-                  <div className="flex flex-row gap-1 items-center">
-                    <img src="/images/us.svg" alt="United States Flag" className="w-6 h-6" />
+                  <p className="text-lg sm:text-xl font-semibold">Location</p>
+                  <div className="flex flex-row gap-1 text-right">
+                    <img src="/images/us.svg" alt="United States Flag" className="w-6 h-6 justify-end" />
                     <span>New Hampshire, US</span>
                   </div>
                 </div>
                 <div className="flex flex-row gap-1 justify-between">
-                  <p className="text-xl font-semibold">Timezone</p>
+                  <p className="text-lg sm:text-xl font-semibold">Timezone</p>
                   <div className="flex flex-row gap-1 items-center">
                     <CurrentTime />
                   </div>
@@ -96,7 +96,7 @@ export default async function Home() {
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-3xl font-bold mb-2">
                 <RiOpenSourceFill size={32} />
-                Open Source Work
+                <span>Open Source <span className="hidden sm:inline">Work</span></span>
               </CardTitle>
               <CardDescription>
                 I&apos;m a huge proponent of open source and always open to collaborations!
@@ -244,45 +244,60 @@ export default async function Home() {
           </Card>
           <Card className="bg-gradient-to-b from-slate-400/30 to-slate-200/60 dark:bg-gradient-to-b dark:from-slate-600/30 dark:to-slate-900/60">
             <CardHeader>
-              <CardTitle className="flex items-center gap-2 text-3xl font-bold -mb-2">
-                <TbHammer size={32} />
+              <CardTitle className="flex items-center gap-2 text-xl sm:text-3xl font-bold -mb-2">
+                <TbHammer size={24} className="sm:size-8" />
                 Skills and Experience
               </CardTitle>
             </CardHeader>
             <CardContent className="flex flex-col gap-6">
               <div className="flex flex-col gap-3">
                 <div className="flex justify-between items-center">
-                  <h4 className="text-xl font-semibold">Systems Administration</h4>
-                  <h4 className="text-xl font-semibold">Experience</h4>
+                  <h4 className="text-lg sm:text-xl font-semibold">
+                    <span className="inline sm:hidden">SysAdmin</span>
+                    <span className="hidden sm:inline">Systems Administration</span>
+                  </h4>
+                  <h4 className="text-lg sm:text-xl font-semibold">Experience</h4>
                 </div>
                 <div className="flex flex-col gap-2">
                   <div className="flex justify-between">
                     <div className="flex flex-row gap-2 items-center">
                       <FaLinux size={24} />
-                      <p>Linux (most distributions)</p>
+                      <div className="sm:flex sm:flex-row sm:items-center gap-1">
+                        <p>Linux</p>
+                        <p className="flex flex-row items-center gap-1 text-xs sm:text-sm">
+                          (most distributions)
+                        </p>
+                      </div>
                     </div>
-                    <p>3 years</p>
+                    <p className="text-right">3 years</p>
                   </div>
                   <div className="flex justify-between">
                     <div className="flex flex-row gap-2 items-center">
                       <SiDocker size={24} />
                       <p>Docker</p>
                     </div>
-                    <p>5 months</p>
+                    <p className="text-right">5 months</p>
                   </div>
                   <div className="flex justify-between">
                     <div className="flex flex-row gap-2 items-center">
                       <FaWindows size={24} />
-                      <p className="flex flex-row items-center gap-1">Windows Server (2012 R2 <ArrowRight size={13} /> 2024)</p>
+                      <div className="sm:flex sm:flex-row sm:items-center gap-1">
+                        <p>Windows Server</p>
+                        <p className="flex flex-row items-center gap-1 text-xs sm:text-sm">
+                          (2012 R2 <ArrowRight size={13} /> 2024)
+                        </p>
+                      </div>
                     </div>
-                    <p>1 year</p>
+                    <p className="text-right">1 year</p>
                   </div>
                 </div>
               </div>
               <div className="flex flex-col gap-3">
                 <div className="flex justify-between items-center">
-                  <h4 className="text-xl font-semibold">Web Development</h4>
-                  <h4 className="text-xl font-semibold">Experience</h4>
+                  <h4 className="text-lg sm:text-xl font-semibold">
+                    Web <span className="inline sm:hidden">Dev</span><span className="hidden sm:inline">Development</span>
+                  </h4>
+                  <h4 className="text-lg sm:text-xl font-semibold">Experience</h4>
                 </div>
                 <div className="flex flex-col gap-2">
                   <div className="flex justify-between">
@@ -290,93 +305,93 @@ export default async function Home() {
                       <SiNodedotjs size={24} />
                       <p>Node.js</p>
                     </div>
-                    <p>2 years</p>
+                    <p className="text-right">2 years</p>
                   </div>
                   <div className="flex justify-between">
                     <div className="flex flex-row gap-2 items-center">
                       <SiNextdotjs size={24} />
                       <p className="flex flex-row items-center gap-1">Next.js</p>
                     </div>
-                    <p>6 months</p>
+                    <p className="text-right">6 months</p>
                   </div>
                   <div className="flex justify-between">
                     <div className="flex flex-row gap-2 items-center">
                       <SiTypescript size={24} />
                       <p>TypeScript</p>
                     </div>
-                    <p>7 months</p>
+                    <p className="text-right">7 months</p>
                   </div>
                   <div className="flex justify-between">
                     <div className="flex flex-row gap-2 items-center">
                       <SiPython size={24} />
                       <p>Python</p>
                     </div>
-                    <p>2 years</p>
+                    <p className="text-right">2 years</p>
                   </div>
                 </div>
               </div>
               <div className="flex flex-col gap-3">
                 <div className="flex justify-between items-center">
-                  <h4 className="text-xl font-semibold">Cloud Environments</h4>
-                  <h4 className="text-xl font-semibold">Experience</h4>
+                  <h4 className="text-lg sm:text-xl font-semibold">Cloud<span className="hidden sm:inline"> Environments</span></h4>
+                  <h4 className="text-lg sm:text-xl font-semibold">Experience</h4>
                 </div>
                 <div className="flex flex-col gap-2">
                   <div className="flex justify-between">
                     <div className="flex flex-row gap-2 items-center">
                       <TbServer size={24} />
-                      <p className="flex flex-row items-center gap-1">VPS/Bare Metal Deployment</p>
+                      <p className="flex flex-row items-center gap-1">VPS/Bare Metal<span className="hidden sm:inline"> Deployment</span></p>
                     </div>
-                    <p>3 years</p>
+                    <p className="text-right">3 years</p>
                   </div>
                   <div className="flex justify-between">
                     <div className="flex flex-row gap-2 items-center">
                       <SiCloudflare size={24} />
                       <p>Cloudflare</p>
                     </div>
-                    <p>2 years</p>
+                    <p className="text-right">2 years</p>
                   </div>
                   <div className="flex justify-between">
                     <div className="flex flex-row gap-2 items-center">
                       <SiOracle size={24} />
-                      <p>Oracle Cloud Infrastructure</p>
+                      <p>Oracle Cloud<span className="hidden sm:inline"> Infrastructure</span></p>
                     </div>
-                    <p>2 years</p>
+                    <p className="text-right">2 years</p>
                   </div>
                   <div className="flex justify-between">
                     <div className="flex flex-row gap-2 items-center">
                       <SiAmazonwebservices size={24} />
-                      <p>Amazon Web Services</p>
+                      <p className="text-xs sm:text-sm">Amazon Web Services</p>
                     </div>
-                    <p>3 months</p>
+                    <p className="text-right">3 months</p>
                   </div>
                 </div>
               </div>
               <div className="flex flex-col gap-3">
                 <div className="flex justify-between items-center">
-                  <h4 className="text-xl font-semibold">Miscellaneous</h4>
-                  <h4 className="text-xl font-semibold">Experience</h4>
+                  <h4 className="text-lg sm:text-xl font-semibold">Miscellaneous</h4>
+                  <h4 className="text-lg sm:text-xl font-semibold">Experience</h4>
                 </div>
                 <div className="flex flex-col gap-2">
                   <div className="flex justify-between">
                     <div className="flex flex-row gap-2 items-center">
                       <TbPlugConnected size={24} />
-                      <p>API development and interaction</p>
+                      <p className="text-xs sm:text-sm">API development & interaction</p>
                     </div>
-                    <p>3 years</p>
+                    <p className="text-right">3 years</p>
                   </div>
                   <div className="flex justify-between">
                     <div className="flex flex-row gap-2 items-center">
                       <TbMail size={24} />
-                      <p>Email server hosting</p>
+                      <p>Email server<span className="hidden sm:inline"> hosting</span></p>
                     </div>
-                    <p>6 months</p>
+                    <p className="text-right">6 months</p>
                   </div>
                   <div className="flex justify-between">
                     <div className="flex flex-row gap-2 items-center">
                       <FaGitAlt size={24} />
                       <p className="flex flex-row items-center gap-1">Git</p>
                     </div>
-                    <p>2.5 years</p>
+                    <p className="text-right">2.5 years</p>
                   </div>
                 </div>
               </div>
