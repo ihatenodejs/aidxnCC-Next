@@ -9,9 +9,40 @@ import {
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { SiAmazonwebservices, SiCloudflare, SiDocker, SiGitea, SiGithub, SiNextdotjs, SiNodedotjs, SiOracle, SiPython, SiTailwindcss, SiTelegram, SiTypescript } from "react-icons/si"
-import { TbHammer, TbMail, TbPlugConnected, TbServer } from "react-icons/tb"
-import { RiGithubFill, RiInformationLine, RiNextjsFill, RiOpenSourceFill, RiTelegram2Fill } from "react-icons/ri"
+import {
+  SiAmazonwebservices,
+  SiAuthentik,
+  SiCloudflare,
+  SiDocker,
+  SiGitea,
+  SiGithub,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiOracle,
+  SiOwncloud,
+  SiPython,
+  SiSearxng,
+  SiTailwindcss,
+  SiTelegram,
+  SiTypescript,
+} from "react-icons/si"
+import {
+  TbCloud,
+  TbCurrencyDollar,
+  TbExternalLink,
+  TbHammer,
+  TbLock,
+  TbMail,
+  TbPlugConnected,
+  TbServer,
+} from "react-icons/tb"
+import {
+  RiGithubFill,
+  RiInformationLine,
+  RiNextjsFill,
+  RiOpenSourceFill,
+  RiTelegram2Fill,
+} from "react-icons/ri"
 import CurrentTime from "@/components/CurrentTime"
 import { FaGitAlt, FaLinux, FaWindows } from "react-icons/fa"
 import { ArrowRight } from "lucide-react"
@@ -395,6 +426,70 @@ export default async function Home() {
                   </div>
                 </div>
               </div>
+            </CardContent>
+          </Card>
+          <Card className="bg-gradient-to-b from-slate-400/30 to-slate-200/60 dark:bg-gradient-to-b dark:from-slate-600/30 dark:to-slate-900/60">
+            <CardContent>
+              <CardTitle className="flex justify-between">
+                <div className="flex items-center gap-2 text-3xl font-bold mb-2">
+                  <TbCloud size={32} />
+                  LibreCloud
+                </div>
+                <Link href="https://librecloud.cc" target="_blank">
+                  <Button className="cursor-pointer">
+                    <TbExternalLink size={16} />
+                    <span>Visit</span>
+                  </Button>
+                </Link>
+              </CardTitle>
+              <CardDescription>
+                LibreCloud is a free cloud services platform I offer to the public.
+              </CardDescription>
+              <div className="flex flex-col gap-2 mt-4">
+                <p className="font-bold">Included Services</p>
+                <ul>
+                  <li className="flex flex-row gap-2 items-center">
+                    <TbMail size={16} />
+                    Email
+                  </li>
+                  <li className="flex flex-row gap-2 items-center">
+                    <TbLock size={16} />
+                    Vaultwarden
+                  </li>
+                  <li className="flex flex-row gap-2 items-center">
+                    <SiGitea size={16} />
+                    Gitea
+                  </li>
+                  <li className="flex flex-row gap-2 items-center">
+                    <SiAuthentik size={16} />
+                    Authentik SSO
+                  </li>
+                  <li className="flex flex-row gap-2 items-center">
+                    <SiOwncloud size={16} />
+                    ownCloud
+                  </li>
+                  <li className="flex flex-row gap-2 items-center">
+                    <SiSearxng size={16} />
+                    <Link href="https://search.librecloud.cc" target="_blank" className="text-blue-300 hover:underline">SearXNG</Link>
+                  </li>
+                </ul>
+                <p className="mt-4">
+                  All services are self-hosted on a dedicated server in Wisconsin, US. We serve over 100 users from various backgrounds, though are currently closed for registration. We hope to re-open registration for new users in mid-June.
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+          <Card className="bg-gradient-to-b from-slate-400/30 to-slate-200/60 dark:bg-gradient-to-b dark:from-slate-600/30 dark:to-slate-900/60">
+            <CardContent>
+              <CardTitle className="flex items-center gap-2 text-3xl font-bold mb-2">
+                <TbCurrencyDollar size={32} />
+                Paid Work
+              </CardTitle>
+              <CardDescription>
+                I accept paid work for web development and systems administration, and I&apos;m always open to new opportunities!
+              </CardDescription>
+              <p className="mt-4">Currently, I&apos;m available for freelance work which is offered by-request at any of my listed contact methods.</p>
+              <p className="mt-4">I am actively seeking jobs, so feel free to reach out if you think I&apos;d be a good fit!</p>
             </CardContent>
           </Card>
         </div>
