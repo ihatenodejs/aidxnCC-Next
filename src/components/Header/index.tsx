@@ -9,9 +9,27 @@ import { useState } from "react"
 function HeaderLinks() {
   return (
     <>
-      <Link href="/" className="hover:text-gray-200 transition-colors">Home</Link>
-      <Link href="/projects" className="hover:text-gray-200 transition-colors">Projects</Link>
-      <Link href="/contact" className="hover:text-gray-200 transition-colors">Contact</Link>
+      <Link
+        href="/"
+        className="hover:text-gray-200 transition-colors"
+      >
+        Home
+      </Link>
+      <Link
+        href="https://disfunction.blog"
+        target="_blank" rel="noopener noreferrer"
+        className="hover:text-gray-200 transition-colors"
+      >
+        Blog
+      </Link>
+      <Link
+        href="https://t.me/p0ntu5"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:text-gray-200 transition-colors"
+      >
+        Telegram
+      </Link>
     </>
   )
 }
@@ -34,8 +52,8 @@ export function Header() {
             </Button>
             <h1 className="text-xl sm:text-2xl font-bold">Aidan Honor</h1>
           </div>
-          <div className="flex items-center gap-3 sm:gap-4">
-            <div className="hidden sm:flex items-center gap-4">
+          <div className="flex items-center gap-6">
+            <div className="hidden sm:flex items-center gap-6">
               <HeaderLinks />
             </div>
             <ModeToggle />
