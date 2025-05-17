@@ -23,9 +23,9 @@ export default async function Home() {
       <Header />
       <div className="flex flex-col items-center w-full h-full px-6 pb-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full">
-          <Card>
-            <CardContent className="flex items-center justify-center sm:justify-start p-4 sm:p-6">
-              <div className="flex flex-col sm:flex-row items-center gap-6">
+          <Card className="bg-transparent">
+            <CardContent className="flex items-center justify-center lg:justify-start p-4 lg:p-6">
+              <div className="flex flex-col lg:flex-row items-center gap-6">
                 <Image
                   src="/images/ihatenodejs.jpeg"
                   alt="Aidan Honor"
@@ -33,26 +33,26 @@ export default async function Home() {
                   height={160}
                   className="rounded-full"
                 />
-                <div className="flex flex-col items-center sm:items-start gap-1 text-center sm:text-left">
+                <div className="flex flex-col items-center lg:items-start gap-1 text-center lg:text-left">
                   <div className="flex flex-col gap-1 mb-2">
-                    <CardTitle className="text-3xl sm:text-4xl font-bold">Aidan Honor</CardTitle>
-                    <CardDescription className="sm:text-md">Systems Administrator, Web Developer, and Student</CardDescription>
+                    <CardTitle className="text-3xl lg:text-4xl font-bold">Aidan Honor</CardTitle>
+                    <CardDescription className="lg:text-md">Systems Administrator, Web Developer, and Student</CardDescription>
                   </div>
-                  <div className="flex flex-col sm:flex-row gap-2 mt-2.5 w-full sm:w-auto">
-                    <Link href="https://github.com/ihatenodejs" className="w-full sm:w-auto">
-                      <Button className="w-full sm:w-auto cursor-pointer">
+                  <div className="flex flex-col lg:flex-row gap-2 mt-2.5 w-full lg:w-auto">
+                    <Link href="https://github.com/ihatenodejs" className="w-full lg:w-auto">
+                      <Button className="w-full lg:w-auto cursor-pointer">
                         <SiGithub className="mr-2" />
                         GitHub
                       </Button>
                     </Link>
-                    <Link href="mailto:aidan@p0ntus.com" className="w-full sm:w-auto">
-                      <Button className="w-full sm:w-auto cursor-pointer">
+                    <Link href="mailto:aidan@p0ntus.com" className="w-full lg:w-auto">
+                      <Button className="w-full lg:w-auto cursor-pointer">
                         <TbMail className="mr-2" />
                         Email
                       </Button>
                     </Link>
-                    <Link href="https://t.me/p0ntu5" className="w-full sm:w-auto">
-                      <Button className="w-full sm:w-auto cursor-pointer">
+                    <Link href="https://t.me/p0ntu5" className="w-full lg:w-auto">
+                      <Button className="w-full lg:w-auto cursor-pointer">
                         <RiTelegram2Fill className="mr-2" />
                         Telegram
                       </Button>
@@ -62,13 +62,19 @@ export default async function Home() {
               </div>
             </CardContent>
           </Card>
-          <Card>
+          <Card className="bg-gradient-to-b from-slate-400/30 to-slate-200/60 dark:bg-gradient-to-b dark:from-slate-600/30 dark:to-slate-900/60">
             <CardContent>
               <CardTitle className="flex items-center gap-2 text-3xl font-bold mb-2">
                 <RiInformationLine size={32} />
                 Quick Info
               </CardTitle>
               <div className="flex flex-col gap-3 mt-6">
+                <div className="flex flex-row gap-1 justify-between">
+                  <p className="text-xl font-semibold">Age</p>
+                  <div className="flex flex-row gap-1 items-center">
+                    17
+                  </div>
+                </div>
                 <div className="flex flex-row gap-1 justify-between">
                   <p className="text-xl font-semibold">Location</p>
                   <div className="flex flex-row gap-1 items-center">
@@ -86,7 +92,7 @@ export default async function Home() {
               </div>
             </CardContent>
           </Card>
-          <Card>
+          <Card className="bg-gradient-to-b from-slate-400/30 to-slate-200/60 dark:bg-gradient-to-b dark:from-slate-600/30 dark:to-slate-900/60">
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-3xl font-bold mb-2">
                 <RiOpenSourceFill size={32} />
@@ -98,33 +104,24 @@ export default async function Home() {
             </CardHeader>
             <CardContent className="flex justify-center">
               <div className="flex flex-col w-full gap-6">
-                <div className="px-4 sm:px-12">
-                  <div className="flex flex-col sm:flex-row gap-6 sm:gap-2 w-full justify-between sm:mb-4">
+                <div className="px-4 xl:px-12">
+                  <div className="flex flex-col lg:flex-row gap-6 lg:gap-2 w-full justify-between lg:mb-4">
                     <div className="flex flex-col gap-2 items-center">
-                      <div className="flex flex-row gap-1 items-center">
-                        <RiGitBranchFill size={24} />
-                        <p className="text-xl sm:text-2xl font-semibold">Commits</p>
-                      </div>
-                      <p className="text-xl sm:text-2xl">1,500+</p>
+                      <p className="text-xl lg:text-2xl font-semibold text-center">Commits</p>
+                      <p className="text-xl lg:text-2xl">1,500+</p>
                     </div>
                     <div className="flex flex-col gap-2 items-center">
-                      <div className="flex flex-row gap-1 items-center">
-                        <RiGitRepositoryFill size={24} />
-                        <p className="text-xl sm:text-2xl font-semibold">Repositories</p>
-                      </div>
-                      <p className="text-xl sm:text-2xl">40+</p>
+                      <p className="text-xl lg:text-2xl font-semibold text-center">Repositories</p>
+                      <p className="text-xl lg:text-2xl">40+</p>
                     </div>
                     <div className="flex flex-col gap-2 items-center">
-                      <div className="flex flex-row gap-1 items-center">
-                        <RiCodeFill size={24} />
-                        <p className="text-xl sm:text-2xl font-semibold">Languages</p>
-                      </div>
-                      <p className="text-xl sm:text-2xl">8</p>
+                      <p className="text-xl lg:text-2xl font-semibold text-center">Languages</p>
+                      <p className="text-xl lg:text-2xl">8</p>
                     </div>
                   </div>
                 </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <Card className="w-full flex flex-col">
+                <div className="grid grid-cols-1 xl:grid-cols-2 gap-4">
+                  <Card className="w-full flex flex-col bg-slate-400/30 dark:bg-slate-600/20">
                     <CardContent className="flex-grow">
                       <CardTitle className="flex items-center gap-2 text-xl font-bold mb-2">
                         <RiNextjsFill />
@@ -155,7 +152,7 @@ export default async function Home() {
                       </div>
                     </CardFooter>
                   </Card>
-                  <Card className="w-full flex flex-col">
+                  <Card className="w-full flex flex-col bg-slate-400/30 dark:bg-slate-600/20">
                     <CardContent className="flex-grow">
                       <CardTitle className="flex items-center gap-2 text-xl font-bold mb-2">
                         <SiTypescript />
@@ -185,7 +182,7 @@ export default async function Home() {
                       </div>
                     </CardFooter>
                   </Card>
-                  <Card className="w-full flex flex-col">
+                  <Card className="w-full flex flex-col bg-slate-400/30 dark:bg-slate-600/20">
                     <CardContent className="flex-grow">
                       <CardTitle className="flex items-center gap-2 text-xl font-bold mb-2">
                         <SiTypescript />
@@ -210,7 +207,7 @@ export default async function Home() {
                       </div>
                     </CardFooter>
                   </Card>
-                  <Card className="w-full flex flex-col">
+                  <Card className="w-full flex flex-col bg-slate-400/30 dark:bg-slate-600/20">
                     <CardContent className="flex-grow">
                       <CardTitle className="flex items-center gap-2 text-xl font-bold mb-2">
                         <SiNextdotjs />
@@ -245,7 +242,7 @@ export default async function Home() {
               </div>
             </CardContent>
           </Card>
-          <Card>
+          <Card className="bg-gradient-to-b from-slate-400/30 to-slate-200/60 dark:bg-gradient-to-b dark:from-slate-600/30 dark:to-slate-900/60">
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-3xl font-bold -mb-2">
                 <TbHammer size={32} />
